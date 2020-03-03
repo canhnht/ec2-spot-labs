@@ -2,22 +2,23 @@
   "LaunchTemplateData": {
     "EbsOptimized": true,
     "IamInstanceProfile": {
-      "Arn": "%instanceProfile%"
+      "Arn": "arn:aws:iam::250277283452:instance-profile/EI-Spot"
     },
-    "ImageId": "ami-001f9c1ca57fbc7a2",
-    "InstanceType": "c5.xlarge",
-    "KeyName": "%key-name%",
+    "ImageId": "ami-02bd97932dabc037b",
+    "InstanceType": "c5.large",
+    "KeyName": "ai-lab",
     "Monitoring": {
       "Enabled": true
     },
     "ElasticInferenceAccelerators": [
       {
+        "Type": "eia2.medium"
+      },
+      {
         "Type": "eia1.medium"
       }
     ],
-    "SecurityGroupIds": [
-      "%instanceSecurityGroup%"
-    ],
+    "SecurityGroupIds": ["sg-0a7fba08155e37f43"],
     "TagSpecifications": [
       {
         "ResourceType": "instance",
